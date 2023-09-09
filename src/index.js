@@ -13,9 +13,9 @@ await page.waitForSelector(selectorMyResumesLink)
 await page.click(selectorMyResumesLink)
 
 // Try to find the button "Поднять в поиске"
-const [raiseResumeButton] = await page.$x("//button[contains(., 'Поднять в поиске')]");
-if (raiseResumeButton) {
-  await raiseResumeButton.click();
+const [raiseUpResumeButton] = await page.$x("//button[contains(., 'Поднять в поиске')]");
+if (raiseUpResumeButton) {
+  await raiseUpResumeButton.click();
 }
 
 await browser.close()
