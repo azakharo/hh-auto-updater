@@ -22,8 +22,10 @@ const updateSuperjob = async (page) => {
   }
 };
 
+///////////////////////////////////////////////////////////
+// Main
 const browser = await puppeteer.launch({
-  headless: false,
+  headless: true,
   userDataDir: "./UserData"
 });
 const page = await browser.newPage()
