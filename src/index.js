@@ -14,7 +14,7 @@ const updateHhRu = async (page) => {
 };
 
 const updateSuperjob = async (page) => {
-  await page.goto('https://superjob.ru');
+  await page.goto('https://superjob.ru', {waitUntil: 'domcontentloaded'});
 
   const [raiseUpResumeButton] = await page.$x("//span[contains(., 'Поднять в поиске')]");
   if (raiseUpResumeButton) {
